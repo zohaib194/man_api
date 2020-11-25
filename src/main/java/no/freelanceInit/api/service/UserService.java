@@ -1,13 +1,17 @@
 package no.freelanceInit.api.service;
 
-import no.freelanceInit.api.entity.User;
+import no.freelanceInit.api.data.entity.User;
+import no.freelanceInit.api.data.message.ResponseMessage;
 
-import java.util.List;
 
 public interface UserService {
-    User saveUser(User user);
-    List<User> getAllUsers();
-    User getUserById(Long userId);
-    User updateUser(User user, Long userId);
-    void deleteUserByID(Long userId);
+    ResponseMessage saveUser(User user);
+
+    ResponseMessage getAllUsers();
+
+    ResponseMessage getUserById(Long userId);
+
+    ResponseMessage updateUser(User user, Long userId);
+
+    ResponseMessage deleteUserByID(Long userId);
 }
